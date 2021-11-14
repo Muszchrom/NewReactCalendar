@@ -12,9 +12,10 @@ export default function Header(props) {
   return (
     <header className="app-header">
       <button onClick={() => setOpen(!open)} className="day-picker">
-        <h1>{props.dayName}</h1>
+        <h1>{window.location.pathname.charAt(1).toUpperCase()
+          + window.location.pathname.substring(2, window.location.pathname.length)}</h1>
       </button>
-      {open && <NavDropdown setDayName={props.setDayName}/>}
+      {open && <NavDropdown setOpen={setOpen}/>}
       {open && <Overlay setOpen={setOpen} open={open}/>}
       <ul className="buttons-wrapper">
         <NavButton/>
@@ -36,16 +37,13 @@ function NavButton(props) {
 }
 
 function NavDropdown(props) {
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
   return (
     <div className="nav-dropdown">
       <ul>
-        <DrpdnItem setDayName={props.setDayName}>Monday</DrpdnItem>
-        <DrpdnItem setDayName={props.setDayName}>Tuesday</DrpdnItem>
-        <DrpdnItem setDayName={props.setDayName}>Wednesday</DrpdnItem>
-        <DrpdnItem setDayName={props.setDayName}>Thursday</DrpdnItem>
-        <DrpdnItem setDayName={props.setDayName}>Friday</DrpdnItem>
-        <DrpdnItem setDayName={props.setDayName}>Saturday</DrpdnItem>
-        <DrpdnItem setDayName={props.setDayName}>Sunday</DrpdnItem>
+        {days.map((day, index) => {
+          return <DrpdnItem key={index} setOpen={props.setOpen}>{day}</DrpdnItem>;
+        })}
       </ul>
     </div>
   )
@@ -53,7 +51,7 @@ function NavDropdown(props) {
 
 function DrpdnItem(props) {
   const onClick = () => {
-    props.setDayName(props.children);
+    props.setOpen(false);
   }
   return (
     <li onClick={() => onClick()}>

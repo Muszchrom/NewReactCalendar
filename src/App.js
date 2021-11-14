@@ -13,10 +13,8 @@ import { monday, tuesday, wednesday, thursday, friday, saturday, sunday } from '
 import DayBuilder from './routes/DayBuilder';
 
 function App() {
-  const [dayName, setDayName] = useState(
-    `${window.location.pathname.charAt(1).toUpperCase()
-      + window.location.pathname.substring(2, window.location.pathname.length)}`
-    );
+  const [dayName, setDayName] = useState("Failed");
+
 
   const colors = [
     "rgb(255, 199, 199)",
