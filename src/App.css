@@ -163,6 +163,20 @@ a {
   justify-content: center;
   align-items: center;
 }
+.absolute-button::after,
+.absolute-button::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: black;
+}
+.absolute-button::before {
+  transform: rotateZ(45deg);
+}
+.absolute-button::after {
+  transform: rotateZ(-45deg);
+}
 .buttons-svg {
   width: 80%;
 }

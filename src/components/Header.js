@@ -4,16 +4,21 @@ import today from '../graphics/svgs/today_black_24dp.svg';
 
 export default function Header(props) {
   const [open, setOpen] = useState(false);
+  const [day, setDay] = useState(window.location.pathname.charAt(1).toUpperCase()
+    + window.location.pathname.substring(2, window.location.pathname.length))
 
   useEffect(() => {
     setOpen(false);
   }, [props.dayName])
 
+  useEffect(() => {
+    !day && setDay('Monday');
+  }, [day])
+
   return (
     <header className="app-header">
       <button onClick={() => setOpen(!open)} className="day-picker">
-        <h1>{window.location.pathname.charAt(1).toUpperCase()
-          + window.location.pathname.substring(2, window.location.pathname.length)}</h1>
+        <h1>{day}</h1>
       </button>
       {open && <NavDropdown setOpen={setOpen}/>}
       {open && <Overlay setOpen={setOpen} open={open}/>}
