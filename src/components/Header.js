@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import today from '../graphics/svgs/today_black_24dp.svg';
 
@@ -7,20 +7,12 @@ export default function Header(props) {
   const [day, setDay] = useState(window.location.pathname.charAt(1).toUpperCase()
     + window.location.pathname.substring(2, window.location.pathname.length))
 
-  useEffect(() => {
-    setOpen(false);
-  }, [props.dayName])
-
-  useEffect(() => {
-    !day && setDay('Monday');
-  }, [day])
-
   return (
     <header className="app-header">
       <button onClick={() => setOpen(!open)} className="day-picker">
         <h1>{day}</h1>
       </button>
-      {open && <NavDropdown setOpen={setOpen}/>}
+      {open && <NavDropdown setDay={setDay} setOpen={setOpen}/>}
       {open && <Overlay setOpen={setOpen} open={open}/>}
       <ul className="buttons-wrapper">
         <NavButton/>
@@ -47,7 +39,7 @@ function NavDropdown(props) {
     <div className="nav-dropdown">
       <ul>
         {days.map((day, index) => {
-          return <DrpdnItem key={index} setOpen={props.setOpen}>{day}</DrpdnItem>;
+          return <DrpdnItem key={index} setDay={props.setDay} setOpen={props.setOpen}>{day}</DrpdnItem>;
         })}
       </ul>
     </div>
@@ -57,10 +49,11 @@ function NavDropdown(props) {
 function DrpdnItem(props) {
   const onClick = () => {
     props.setOpen(false);
+    props.setDay(props.children);
   }
   return (
-    <li onClick={() => onClick()}>
-      <NavLink to={props.children.toLowerCase()}>
+    <li>
+      <NavLink onClick={() => onClick()} to={props.children.toLowerCase()}>
         {props.children}
       </NavLink>
     </li>
