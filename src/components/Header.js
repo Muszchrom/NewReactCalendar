@@ -4,15 +4,13 @@ import today from '../graphics/svgs/today_black_24dp.svg';
 
 export default function Header(props) {
   const [open, setOpen] = useState(false);
-  const [day, setDay] = useState(window.location.pathname.charAt(1).toUpperCase()
-    + window.location.pathname.substring(2, window.location.pathname.length))
 
   return (
     <header className="app-header">
       <button onClick={() => setOpen(!open)} className="day-picker">
-        <h1>{day}</h1>
+        <h1>{props.dayName}</h1>
       </button>
-      {open && <NavDropdown setDay={setDay} setOpen={setOpen}/>}
+      {open && <NavDropdown setOpen={setOpen}/>}
       {open && <Overlay setOpen={setOpen} open={open}/>}
       <ul className="buttons-wrapper">
         <NavButton/>
@@ -21,6 +19,7 @@ export default function Header(props) {
   );
 }
 
+// Currently not in use
 function NavButton(props) {
   const [open, setOpen] = useState(false);
   return (
@@ -39,7 +38,7 @@ function NavDropdown(props) {
     <div className="nav-dropdown">
       <ul>
         {days.map((day, index) => {
-          return <DrpdnItem key={index} setDay={props.setDay} setOpen={props.setOpen}>{day}</DrpdnItem>;
+          return <DrpdnItem key={index} setOpen={props.setOpen}>{day}</DrpdnItem>;
         })}
       </ul>
     </div>
@@ -47,13 +46,9 @@ function NavDropdown(props) {
 }
 
 function DrpdnItem(props) {
-  const onClick = () => {
-    props.setOpen(false);
-    props.setDay(props.children);
-  }
   return (
     <li>
-      <NavLink onClick={() => onClick()} to={props.children.toLowerCase()}>
+      <NavLink onClick={() => props.setOpen(false)} to={props.children.toLowerCase()}>
         {props.children}
       </NavLink>
     </li>

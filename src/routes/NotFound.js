@@ -1,5 +1,11 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-export default function NotFound() {
+
+export default function NotFound(props) {
+  useEffect(() => {
+     props.setDayName(props.title);
+  })
+
   return (
     <div style={{textAlign: "center"}}>
       <h1>404 ERR</h1>

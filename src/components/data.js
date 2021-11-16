@@ -32,7 +32,7 @@ const monday = [
     type: "Labo",
     professor: "Dr Inż. J. Majcher"
   },
-]
+];
 const tuesday = [
   {
     start: "08:15",
@@ -76,7 +76,7 @@ const tuesday = [
     type: "Wykład",
     professor: "?"
   },
-]
+];
 const wednesday = [
   {
     start: "08:15",
@@ -118,7 +118,7 @@ const wednesday = [
     type: "Wykład",
     professor: "???"
   },
-]
+];
 const thursday = [
   {
     start: "12:15",
@@ -136,7 +136,7 @@ const thursday = [
     type: "Wykład",
     professor: "Dr M. Kubalińska"
   },
-]
+];
 const friday = [
   {
     start: "08:30",
@@ -163,7 +163,7 @@ const friday = [
     type: "Ćwiczenia",
     professor: "Dr Inż. K. Siedliska"
   },
-]
+];
 const saturday = [
   {
     start: "8:00",
@@ -173,7 +173,7 @@ const saturday = [
     type: "Nauka",
     professor: "Karol 😎"
   }
-]
+];
 const sunday = [
   {
     start: "8:00",
@@ -183,7 +183,16 @@ const sunday = [
     type: "Nauka",
     professor: "Karol 😎"
   }
-]
-
+];
+const colors = [
+  "rgb(255, 199, 199)",
+  "rgb(255, 232, 192)",
+  "rgb(255, 243, 143)",
+  "rgb(185, 230, 181)",
+  "rgb(183, 228, 255)",
+  "rgb(230, 200, 246)",
+  "rgb(255, 201, 228)"
+];
 // const exp = ;
 export { monday, tuesday, wednesday, thursday, friday, saturday, sunday };
+export { colors };

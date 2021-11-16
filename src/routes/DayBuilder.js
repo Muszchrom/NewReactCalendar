@@ -1,9 +1,15 @@
+import { useEffect } from 'react';
+
 import Tile from '../components/Tile';
 
 import schoolSVG from '../graphics/svgs/school_black_24dp.svg';
 
 export default function DayBuilder(props) {
   const [min, max] = [0, 6];
+
+  useEffect(() => {
+     props.setDayName(props.title);
+  })
 
   return (
     <div style={{width: "100%"}}>
