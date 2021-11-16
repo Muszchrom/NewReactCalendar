@@ -81,13 +81,19 @@ a {
 }
 .nav-dropdown ul {
   padding: 0;
-  height: 100px;
+  margin-top: 0;
+  height: 150px;
   border-bottom: 2px solid var(--text);
   overflow-y: scroll;
+  list-style-type: none;
 }
 .nav-dropdown li {
-  padding-bottom: 1em;
   font-weight: bold;
+  font-size: 1.2em;
+}
+.nav-dropdown li a {
+  display: block;
+  padding: .5em 0;
   font-size: 1.2em;
 }
 
