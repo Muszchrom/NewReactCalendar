@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import today from '../graphics/svgs/today_black_24dp.svg';
 import FocusTrap from 'focus-trap-react';
 
@@ -28,14 +28,14 @@ export default function Header(props) {
           ) : (
             <div style={{display: "flex"}}>
               <button onClick={() => setOpen(!open)} className="day-picker">
-                <h1>{props.dayName}</h1>
+                <h1 className="no-select">{props.dayName}</h1>
               </button>
               {open && <NavDropdown setOpen={setOpen}/>}
               {open && <Overlay setOpen={setOpen} open={open}/>}
             </div>
           )}
         <ul className="buttons-wrapper">
-          <NavButton/>
+          <NavButton getCurrentDay={props.getCurrentDay}/>
         </ul>
       </div>
     </header>
@@ -44,13 +44,13 @@ export default function Header(props) {
 
 // Currently not in use
 function NavButton(props) {
-  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <li className="button-container">
-      <button onClick={() => setOpen(!open)} className="nav-button">
-        <img className="calendar-icon" src={today} alt="Should not exist"/>
+      <button onClick={() => navigate(props.getCurrentDay())} className="nav-button">
+        <img className="calendar-icon no-select" src={today} alt="Should not exist"/>
       </button>
-      {open && props.children}
     </li>
   )
 }

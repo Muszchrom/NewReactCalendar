@@ -53,7 +53,7 @@ a {
   padding: 0 1em;
   display: flex;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -137,7 +137,7 @@ a {
   margin: 0 auto 1em auto;
   padding: 0 1em;
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
 }
 .hours {
   font-weight: bold;
@@ -163,7 +163,7 @@ a {
   font-size: 1.5em;
   position: relative;
   height: 100%;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   overflow-x: auto;
 }
