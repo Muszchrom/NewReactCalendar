@@ -42,7 +42,7 @@ export default function Header(props) {
   );
 }
 
-// Currently not in use
+// Navigate to current day
 function NavButton(props) {
   const navigate = useNavigate();
 

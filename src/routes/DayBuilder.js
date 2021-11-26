@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 import Tile from '../components/Tile';
+import { colors } from '../components/data.js';
 
 import schoolSVG from '../graphics/svgs/school_black_24dp.svg';
 
@@ -19,7 +20,7 @@ export default function DayBuilder(props) {
             start={obj.start}
             end={obj.end}
             label={obj.label}
-            color={props.colors[Math.floor(Math.random() * (max - min + 1)) + min]}
+            color={colors[Math.floor(Math.random() * (max - min + 1)) + min]}
             key={index}>
             {obj.professor && <SchoolContent obj={props.day[index]}/>}
           </Tile>
