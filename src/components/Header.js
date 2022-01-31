@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import today from '../graphics/svgs/today_black_24dp.svg';
+// import today from '../graphics/svgs/today_black_24dp.svg';
 import FocusTrap from 'focus-trap-react';
 
 export default function Header(props) {
@@ -49,7 +49,6 @@ function NavButton(props) {
   return (
     <li className="button-container">
       <button onClick={() => navigate(props.getCurrentDay())} className="nav-button">
-        <img className="calendar-icon no-select" src={today} alt="Should not exist"/>
       </button>
     </li>
   )
