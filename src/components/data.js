@@ -1,13 +1,5 @@
 const monday = [
   {
-    start: "08:00",
-    end: "10:15",
-    label: "Fizyka I",
-    hall: "Z102",
-    type: "Labo",
-    professor: "Dr Inż. A. Dudziak"
-  },
-  {
     start: "10:30",
     end: "12:00",
     label: "Komputerowa grafika inżynierska",
@@ -49,14 +41,6 @@ const tuesday = [
     hall: "E301",
     type: "Wykład",
     professor: "Dr Hab. Inż. T. Kołtunowicz"
-  },
-  {
-    start: "12:15",
-    end: "14:00",
-    label: "Kosztorysowanie",
-    hall: "E301",
-    type: "Wykład",
-    professor: "Dr Inż. V. Bondariev"
   },
   {
     start: "14:15",
@@ -110,14 +94,6 @@ const wednesday = [
     type: "Ćwiczenia",
     professor: "???"
   },
-  {
-    start: "16:30",
-    end: "18:00",
-    label: "Wprowadzenie na rynek pracy i do działalności gospodarczej",
-    hall: "E201",
-    type: "Wykład",
-    professor: "???"
-  },
 ];
 const thursday = [
   {
@@ -127,14 +103,6 @@ const thursday = [
     hall: "H24",
     type: "Labo",
     professor: "Mgr Inż. A. Chudy"
-  },
-  {
-    start: "16:00",
-    end: "18:15",
-    label: "Matematyka, Fakultet",
-    hall: "E401",
-    type: "Wykład",
-    professor: "Dr M. Kubalińska"
   },
 ];
 const friday = [
