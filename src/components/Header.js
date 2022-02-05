@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-// import today from '../graphics/svgs/today_black_24dp.svg';
 import FocusTrap from 'focus-trap-react';
 
 export default function Header(props) {
@@ -55,12 +54,18 @@ function NavButton(props) {
 }
 
 function NavDropdown(props) {
-  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+  useEffect(() => {
+    const currentDaysElement = document.getElementById(`nav${new Date().getDay()}`);
+    currentDaysElement.scrollIntoView();
+  })
+
   return (
       <div className="nav-dropdown">
         <ul>
           {days.map((day, index) => {
-            return <DrpdnItem key={index} setOpen={props.setOpen}>{day}</DrpdnItem>;
+            return <DrpdnItem index={index} key={index} setOpen={props.setOpen}>{day}</DrpdnItem>;
           })}
         </ul>
       </div>
@@ -70,7 +75,7 @@ function NavDropdown(props) {
 function DrpdnItem(props) {
   return (
     <li>
-      <NavLink onClick={() => props.setOpen(false)} to={props.children.toLowerCase()}>
+      <NavLink id={`nav${props.index}`} onClick={() => props.setOpen(false)} to={props.children.toLowerCase()}>
         {props.children}
       </NavLink>
     </li>
