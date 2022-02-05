@@ -17,7 +17,7 @@ export default function Header(props) {
           {open ? (
             <FocusTrap>
               <div style={{display: "flex"}}>
-                <button onClick={() => setOpen(!open)} className="day-picker">
+                <button onClick={() => setOpen(!open)} className="day-picker" aria-label="Open navigation">
                   <h1 className="no-select">{props.dayName}</h1>
                 </button>
                 {open && <NavDropdown setOpen={setOpen}/>}
@@ -26,7 +26,7 @@ export default function Header(props) {
             </FocusTrap>
           ) : (
             <div style={{display: "flex"}}>
-              <button onClick={() => setOpen(!open)} className="day-picker">
+              <button onClick={() => setOpen(!open)} className="day-picker" aria-label="Open navigation">
                 <h1 className="no-select">{props.dayName}</h1>
               </button>
               {open && <NavDropdown setOpen={setOpen}/>}
@@ -47,7 +47,7 @@ function NavButton(props) {
 
   return (
     <li className="button-container">
-      <button onClick={() => navigate(props.getCurrentDay())} className="nav-button">
+      <button onClick={() => navigate(props.getCurrentDay())} className="nav-button" aria-label="Go to the current day">
       </button>
     </li>
   )
