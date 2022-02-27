@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 import Tile from '../components/Tile';
+import Test from '../components/Test';
 import { colors } from '../components/data.js';
 
 import schoolSVG from '../graphics/svgs/school_black_24dp.svg';
@@ -10,10 +11,10 @@ export default function DayBuilder(props) {
 
   useEffect(() => {
      props.setDayName(props.title);
-  })
+  }, [props])
 
   return (
-    <div style={{width: "100%"}}>
+    <div style={{width: "100%", maxWidth: "calc(500px + 2em)", flex: 1, padding: "0 1em", position: "relative"}}>
       {props.day.map((obj, index) => {
         return (
           <Tile
@@ -26,6 +27,7 @@ export default function DayBuilder(props) {
           </Tile>
         );
       })}
+      <Test/>
     </div>
   );
 }
