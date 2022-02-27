@@ -16,14 +16,16 @@ export default function Tile(props) {
   }, [open])
 
   return (
-    <div onKeyPress={(e) => e.key === "Enter" && setOpen(!open)} onClick={() => setOpen(!open)} role="button" tabIndex="0" className="tile" style={{background: props.color}}>
-      <p className="no-select hours">{props.start} - {props.end}</p>
-      <p className="no-select label">{props.label}</p>
-      <div className="tile-icon"></div>
+    <>
+      <div onKeyPress={(e) => e.key === "Enter" && setOpen(!open)} onClick={() => setOpen(!open)} role="button" tabIndex="0" className="tile" style={{background: props.color}}>
+        <p className="no-select hours">{props.start} - {props.end}</p>
+        <p className="no-select label">{props.label}</p>
+        <div className="tile-icon"></div>
+      </div>
       {open &&
-        <Overlay backgroundColor={props.color}>
+        <Overlay backgroundColor={props.color} setOpen={setOpen} open={open}>
           {props.children}
         </Overlay>}
-    </div>
+    </>
   );
 }

@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6, p, span, a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 a {
@@ -127,7 +128,8 @@ a {
 .nav-dropdown li a,
 .nav-button,
 .tile,
-.absolute-button {
+.absolute-button,
+.absolute-close-button {
   cursor: pointer;
 }
 .overlay {
@@ -145,8 +147,6 @@ a {
   background-color: var(--c1);
   margin: 0 auto 1em auto;
   padding: 0 1em;
-  width: 90%;
-  max-width: 500px;
 }
 .hours {
   font-weight: bold;
@@ -179,11 +179,10 @@ a {
   margin: 0 auto;
   overflow-x: auto;
 }
-
 .absolute-button {
   position: absolute;
-  top: 2em;
-  right: 1em;
+  left: 1em;
+  bottom: 8em;
   padding: 0;
   border: none;
   border-radius: 50%;
@@ -193,19 +192,29 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all .2s ease-in-out;
 }
-.absolute-button::after,
-.absolute-button::before {
+.absolute-button:hover {
+  transform: scale(1.1);
+}
+.absolute-close-button {
+  left: unset;
+  bottom: unset;
+  top: 2em;
+  right: 1em;
+}
+.absolute-close-button::after,
+.absolute-close-button::before {
   content: '';
   position: absolute;
   width: 30px;
   height: 3px;
   background: black;
 }
-.absolute-button::before {
+.absolute-close-button::before {
   transform: rotateZ(45deg);
 }
-.absolute-button::after {
+.absolute-close-button::after {
   transform: rotateZ(-45deg);
 }
 .buttons-svg {
