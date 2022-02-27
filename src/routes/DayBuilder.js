@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import Tile from '../components/Tile';
-import Test from '../components/Test';
+import AdditionalInfo from '../components/AdditionalInfo';
 import { colors } from '../components/data.js';
 
 import schoolSVG from '../graphics/svgs/school_black_24dp.svg';
@@ -27,7 +27,7 @@ export default function DayBuilder(props) {
           </Tile>
         );
       })}
-      <Test/>
+      <AdditionalInfo/>
     </div>
   );
 }

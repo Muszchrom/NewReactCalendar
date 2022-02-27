@@ -2,13 +2,14 @@ import { useState } from 'react';
 import Overlay from './Overlay';
 import mapa from '../graphics/jpg/mapaKampusu.jpg'
 
-export default function Test(props) {
+export default function AdditionalInfo(props) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       {open &&
         <Overlay backgroundColor={"antiquewhite"} setOpen={setOpen} open={open}>
+          <a href="http://we1.pollub.pl/ats4/" target="_blank" style={{textDecoration: "underline"}}>Oryginalny plan</a>
           <ul style={{marginTop: "2em"}}>
             <li>EXXX - Wydział Elektrotechniki i Informatyki</li>
             <li>Ox102 - Wydział Zarządzania</li>
