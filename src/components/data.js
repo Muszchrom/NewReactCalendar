@@ -1,136 +1,134 @@
 const monday = [
   {
-    start: "10:30",
-    end: "12:00",
-    label: "Komputerowa grafika inżynierska",
-    hall: "E6",
+    start: "14:00",
+    end: "15:30",
+    label: "Teoria obwodów elektrycznych",
+    hall: "E407",
     type: "Labo",
-    professor: "Dr Hab. Inż. T. Kołtunowicz"
+    professor: "Dr inż. J. Kozieł"
   },
   {
-    start: "12:15",
-    end: "14:00",
-    label: "⭐Kosztorysowanie",
-    bonusContent: "Tygodnie parzyste",
-    hall: "T403",
+    start: "15:45",
+    end: "17:15",
+    label: "Programowanie strukturalne",
+    hall: "E213",
     type: "Labo",
-    professor: "Dr Inż. V. Bondariev"
+    professor: "Mgr inż. B. Stefańczak"
   },
   {
-    start: "16:15",
-    end: "18:00",
-    label: "Podstawy Informatyki",
-    hall: "E406",
+    start: "18:00",
+    end: "20:15",
+    label: "⭐Podstawy sieci komputerowych",
+    bonusContent: "Tydzień 6-15",
+    hall: "PE 14",
     type: "Labo",
-    professor: "Dr Inż. J. Majcher"
-  },
+    professor: "Dr Inż. D. Sawicki"
+  }
 ];
 const tuesday = [
   {
     start: "08:15",
     end: "10:00",
-    label: "Matematyka I",
-    hall: "E201",
+    label: "Matematyka II",
+    hall: "E401",
     type: "Wykład",
     professor: "Dr Hab. Z. Łagodowski"
   },
   {
     start: "10:15",
     end: "12:00",
-    label: "Komputerowa grafika inżynierska",
-    hall: "E301",
+    label: "Fizyka II",
+    hall: "E401",
     type: "Wykład",
-    professor: "Dr Hab. Inż. T. Kołtunowicz"
+    professor: "Dr inż. A. Dudziak"
   },
   {
-    start: "14:15",
-    end: "16:00",
-    label: "⭐Narzędzia informatyczne",
-    bonusContent: "Tygodnie nieparzyste",
+    start: "12:15",
+    end: "14:30",
+    label: "Teoria obwodów elektrycznych",
     hall: "E301",
-    type: "Wykład",
-    professor: "No clue"
-  },
-  {
-    start: "14:15",
-    end: "16:00",
-    label: "⭐Ochrona własności intelektualnej",
-    bonusContent: "Tygodnie parzyste",
-    hall: "E301",
-    type: "Wykład",
-    professor: "?"
-  },
+    type: "Ćwiczenia",
+    professor: "Dr inż. J. Kozieł"
+  }
 ];
 const wednesday = [
   {
     start: "08:15",
     end: "10:00",
-    label: "Wstęp do matematyki",
-    hall: "E201",
+    label: "Programowanie strukturalne",
+    hall: "E301",
     type: "Wykład",
-    professor: "Dr Hab. Z. Łagodowski"
-  },
-  {
-    start: "10:15",
-    end: "11:45",
-    label: "Fizyka I",
-    hall: "E201",
-    type: "Wykład",
-    professor: "Dr Inż. A. Dudziak"
-  },
-  {
-    start: "12:15",
-    end: "14:00",
-    label: "Podstawy Informatyki",
-    hall: "E201",
-    type: "Wykład",
-    professor: "Dr Hab. Inż. J. Kozak"
-  },
-  {
-    start: "14:00",
-    end: "15:30",
-    label: "Wychowanie fizyczne I",
-    hall: "???",
-    type: "Ćwiczenia",
-    professor: "???"
-  },
-];
-const thursday = [
-  {
-    start: "12:15",
-    end: "14:00",
-    label: "Narzędzia informatyczne",
-    hall: "H24",
-    type: "Labo",
-    professor: "Mgr Inż. A. Chudy"
-  },
-];
-const friday = [
-  {
-    start: "08:30",
-    end: "10:00",
-    label: "Wstęp do Matematyki",
-    hall: "E402",
-    type: "Ćwiczenia",
-    professor: "Dr M. Kubalińska"
+    professor: "Dr hab. inż. J. Montusiewicz"
   },
   {
     start: "10:15",
     end: "12:00",
-    label: "Matematyka I",
-    hall: "S15a",
-    type: "Ćwiczenia",
-    professor: "Dr Hab. Z. Łagodowski"
+    label: "Systemy operacyjne",
+    hall: "E301",
+    type: "Wykład",
+    professor: "Dr hab. inż. A. Kotyra"
   },
   {
-    start: "14:15",
-    end: "16:00",
-    label: "⭐Fizyka I",
-    bonusContent: "Tygodnie nieparzyste",
-    hall: "E402",
-    type: "Ćwiczenia",
-    professor: "Dr Inż. K. Siedliska"
+    start: "12:15",
+    end: "13:45",
+    label: "Podstawy sieci komputerowych",
+    hall: "E301",
+    type: "Wykład",
+    professor: "Dr inż. D. Sawicki"
   },
+  {
+    start: "14:00",
+    end: "15:30",
+    label: "Wychowanie fizyczne II",
+    hall: "SW",
+    type: "Ćwiczenia",
+    professor: "No clue"
+  },
+  {
+    start: "16:15",
+    end: "19:15",
+    label: "Teoria obwodów elektrycznych",
+    hall: "E201",
+    type: "Wykład",
+    professor: "Prof. dr hab. inż. S. Kozak"
+  }
+];
+const thursday = [
+  {
+    start: "08:15",
+    end: "10:00",
+    label: "Systemy operacyjne",
+    hall: "PE 10",
+    type: "Labo",
+    professor: "Dr inż. P. Prokop"
+  },
+  {
+    start: "13:00",
+    end: "15:15",
+    label: "Fizyka II",
+    hall: "Ox102",
+    type: "Labo",
+    professor: "Dr inż. A. Dudziak"
+  },
+];
+const friday = [
+  {
+    start: "08:15",
+    end: "10:00",
+    label: "Matematyka II",
+    hall: "PE 15a",
+    type: "Ćwiczenia",
+    professor: "Dr hab. Z. Łagodowski"
+  },
+  {
+    start: "10:15",
+    end: "12:00",
+    label: "⭐Teoria obwodów elektrycznych",
+    bonusContent: "Tygodnie nieparzyste",
+    hall: "E405",
+    type: "Projekt",
+    professor: "Dr inż. S. Styła"
+  }
 ];
 const saturday = [
   {
