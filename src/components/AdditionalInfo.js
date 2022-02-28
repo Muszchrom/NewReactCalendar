@@ -9,7 +9,7 @@ export default function AdditionalInfo(props) {
     <>
       {open &&
         <Overlay backgroundColor={"antiquewhite"} setOpen={setOpen} open={open}>
-          <a href="http://we1.pollub.pl/ats4/" target="_blank" style={{textDecoration: "underline"}}>Oryginalny plan </a>
+          <a href="http://we1.pollub.pl/ats4/" target="_blank" rel="noreferrer" style={{textDecoration: "underline"}}>Oryginalny plan</a>
           <ul style={{marginTop: "2em"}}>
             <li>EXXX - Wydział Elektrotechniki i Informatyki</li>
             <li>Ox102 - Wydział Zarządzania</li>
