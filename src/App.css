@@ -227,3 +227,20 @@ a {
   width: 200px;
   transform: rotateZ(-10deg);
 }
+
+.dots, .dots::after, .dots::before {
+  background: black;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.dots::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+}
+.dots::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+}

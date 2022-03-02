@@ -14,7 +14,7 @@ export default function DayBuilder(props) {
   }, [props])
 
   return (
-    <div style={{width: "100%", maxWidth: "calc(500px + 2em)", flex: 1, padding: "0 1em", position: "relative"}}>
+    <div style={{width: "100%", maxWidth: "calc(500px + 2em)", flex: 1, padding: "0 1em"}}>
       {props.day.map((obj, index) => {
         return (
           <Tile
