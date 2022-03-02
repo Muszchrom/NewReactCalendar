@@ -20,7 +20,7 @@ export default function AdditionalInfo(props) {
           <img src={mapa} style={{width: "100%", boxShadow: "5px 5px 18px grey"}} alt="Mapa kampusu"/>
         </Overlay>
       }
-      <button style={{background: "lightcoral", position: "sticky", marginLeft: "auto", marginRight: "1em"}} className="absolute-button" onClick={() => setOpen(!open)}>
+      <button style={{background: "lightcoral", position: "sticky", marginLeft: "auto", marginRight: "1em"}} aria-label="Additional info" className="absolute-button" onClick={() => setOpen(!open)}>
         <div className="dots"></div>
       </button>
     </>
