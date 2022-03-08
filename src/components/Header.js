@@ -29,7 +29,7 @@ export default function Header(props) {
               <button onClick={() => setOpen(!open)} className="day-picker" aria-label="Open navigation">
                 <h1 className="no-select">{props.dayName}</h1>
               </button>
-              {open && <NavDropdown setOpen={setOpen} getCurrentDay={props.getCurrentDay}/>}
+              {open && <NavDropdown setOpen={setOpen}/>}
               {open && <Overlay setOpen={setOpen} open={open}/>}
             </div>
           )}
