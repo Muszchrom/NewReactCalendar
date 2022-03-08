@@ -29,7 +29,7 @@ export default function Header(props) {
               <button onClick={() => setOpen(!open)} className="day-picker" aria-label="Open navigation">
                 <h1 className="no-select">{props.dayName}</h1>
               </button>
-              {open && <NavDropdown setOpen={setOpen}/>}
+              {open && <NavDropdown setOpen={setOpen} getCurrentDay={props.getCurrentDay}/>}
               {open && <Overlay setOpen={setOpen} open={open}/>}
             </div>
           )}
@@ -57,7 +57,7 @@ function NavDropdown(props) {
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   useEffect(() => {
-    const currentDaysElement = document.getElementById(`nav${new Date().getDay()}`);
+    const currentDaysElement = document.getElementById(`nav${new Date().getDay()-1}`);
     currentDaysElement.scrollIntoView();
   })
 
