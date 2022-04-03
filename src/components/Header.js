@@ -57,7 +57,9 @@ function NavDropdown(props) {
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   useEffect(() => {
-    const currentDaysElement = document.getElementById(`nav${new Date().getDay()-1}`);
+    let today = new Date().getDay() - 1;
+    today = today < 0 ? 6 : today;
+    const currentDaysElement = document.getElementById(`nav${today}`);
     currentDaysElement.scrollIntoView();
   })
 
