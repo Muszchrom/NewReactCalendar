@@ -35,10 +35,6 @@ export default function Calc(props) {
     setWynik(`${r1} + ${r2}i`);
   }
 
-  const oblicz2 = () => {
-    const [r1, r2] = mnozenie(wykladnik_rez, wykladnik_imz, mianownik_rez, mianownik_imz);
-    setWynik(`${r1} + ${r2}i`);
-  }
   const mnozenie = (a_rez, a_imz, b_rez, b_imz) => {
     const rez = a_rez * b_rez - a_imz * b_imz;
     const imz = a_rez * b_imz + a_imz * b_rez;
@@ -76,38 +72,6 @@ export default function Calc(props) {
   );
 }
 
-// return (
-//   <div>
-//     <h1>dzielenie</h1>
-//     <div className="dane-wejsciowe">
-//       <div>
-//         <input value={wykladnik_rez} type="text" onChange={e => setWykladnik_rez(e.target.value)}/>
-//         <span style={{fontSize: "1.6em", marginLeft: "0px"}}>+</span>
-//         <input value={wykladnik_imz} type="text" onChange={e => setWykladnik_imz(e.target.value)}/>
-//         <span style={{fontSize: "1.6em", marginLeft: "-25px"}}>i</span>
-//       </div>
-//       <span className="kreska-ulamkowa"></span>
-//       <div>
-//         <input value={mianownik_rez} type="text" onChange={e => setMianownik_rez(e.target.value)}/>
-//         <span style={{fontSize: "1.6em", marginLeft: "0px"}}>+</span>
-//         <input value={mianownik_imz} type="text" onChange={e => setMianownik_imz(e.target.value)}/>
-//         <span style={{fontSize: "1.6em", marginLeft: "-25px"}}>i</span>
-//       </div>
-//
-//     </div>
-//     <div>
-//       <button style={{marginTop: "1em"}} className="fancy-button" onClick={oblicz}>Oblicz</button>
-//       <div className="wyrazenie">
-//         <Ulamek wykladnik={wykladnik_rez + " + " + wykladnik_imz + "i"} mianownik={mianownik_rez + " + " + mianownik_imz + "i"}/>
-//         <span> = </span>
-//         <Ulamek wykladnik={inny_wykladnik} mianownik={inny_mianownik}/>
-//         <span> = {wynik}</span>
-//       </div>
-//     </div>
-//   </div>
-// );
-// }
-// <button className="fancy-button" onClick={oblicz2}>Oblicz2</button>
 
 function Ulamek(props) {
   return (
