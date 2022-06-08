@@ -11,6 +11,7 @@ import { monday, tuesday, wednesday, thursday, friday, saturday, sunday } from '
 import Header from './components/Header';
 import DayBuilder from './routes/DayBuilder';
 import NotFound from './routes/NotFound';
+import Calc from './routes/calc';
 
 function App() {
   const [dayName, setDayName] = useState("");
@@ -42,6 +43,7 @@ function App() {
           <Route path="/friday" element={<DayBuilder  setDayName={setDayName} title={"Friday"} day={friday}/>} />
           <Route path="/saturday" element={<DayBuilder  setDayName={setDayName} title={"Satuday"} day={saturday}/>} />
           <Route path="/sunday" element={<DayBuilder  setDayName={setDayName} title={"Sunday"} day={sunday}/>} />
+          <Route path="/calc" element={<Calc/>} />
           <Route path="*" element={<NotFound setDayName={setDayName} title={"ERR 404"} />} />
         </Routes>
       </BrowserRouter>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Overlay from './Overlay';
+import { NavLink } from 'react-router-dom';
 import mapa from '../graphics/jpg/mapaKampusu.jpg'
 
 export default function AdditionalInfo(props) {
@@ -18,6 +19,9 @@ export default function AdditionalInfo(props) {
             <li>SW - Studium Wychowania Fizycznego i Sportu</li>
           </ul>
           <img src={mapa} style={{width: "100%", boxShadow: "5px 5px 18px grey"}} alt="Mapa kampusu"/>
+          <NavLink to={'/calc'}>
+            to calc
+          </NavLink>
         </Overlay>
       }
       <button style={{background: "lightcoral", position: "sticky", marginLeft: "auto", marginRight: "1em"}} aria-label="Additional info" className="absolute-button" onClick={() => setOpen(!open)}>
