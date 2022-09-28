@@ -1,133 +1,132 @@
 const monday = [
   {
-    start: "14:00",
-    end: "15:30",
-    label: "Teoria obwodów elektrycznych",
-    hall: "E407",
-    type: "Labo",
-    professor: "Dr inż. J. Kozieł"
+    start: "08:00",
+    end: "09:45",
+    label: "Elektronika i Energoelektronika",
+    hall: "PE 15A",
+    type: "Wykład",
+    professor: "Dr inż. T. Ławicki"
   },
   {
-    start: "15:45",
-    end: "17:15",
-    label: "Programowanie strukturalne",
-    hall: "E213",
+    start: "09:45",
+    end: "12:00",
+    label: "⭐Technika Cyfrowa",
+    bonusContent: "Tydzień 1-10",
+    hall: "E307",
     type: "Labo",
-    professor: "Mgr inż. B. Stefańczak"
-  },
-  {
-    start: "18:00",
-    end: "20:15",
-    label: "⭐Podstawy sieci komputerowych",
-    bonusContent: "Tydzień 6-15",
-    hall: "PE 14",
-    type: "Labo",
-    professor: "Dr Inż. D. Sawicki"
+    professor: "Dr inż. T. Ławicki"
   }
 ];
 const tuesday = [
   {
     start: "08:15",
     end: "10:00",
-    label: "Matematyka II",
-    hall: "E401",
-    type: "Wykład",
-    professor: "Dr Hab. Z. Łagodowski"
+    label: "Podstawy Metrologii",
+    hall: "E320",
+    type: "Labo",
+    professor: "Mgr. Inż. W. Kozioł"
   },
   {
     start: "10:15",
     end: "12:00",
-    label: "Fizyka II",
-    hall: "E401",
-    type: "Wykład",
-    professor: "Dr inż. A. Dudziak"
+    label: "Wprowadzenie do systemów baz danych",
+    hall: "E207",
+    type: "Labo",
+    professor: "Dr inż. R. Dzierżak"
   },
   {
-    start: "12:15",
-    end: "14:30",
-    label: "Teoria obwodów elektrycznych",
-    hall: "E301",
-    type: "Ćwiczenia",
-    professor: "Dr inż. J. Kozieł"
+    start: "14:15",
+    end: "16:00",
+    label: "Wprowadzenie do systemów baz danych",
+    hall: "E401",
+    type: "Wykład",
+    professor: "Dr Hab. Inż. P. Miller, Prof. Uczelni"
+  },
+  {
+    start: "16:15",
+    end: "18:00",
+    label: "Podstawy Metrologii",
+    hall: "E311",
+    type: "Wykład",
+    professor: "Dr Inż. J. Majewski"
   }
 ];
 const wednesday = [
   {
     start: "08:15",
     end: "10:00",
-    label: "Programowanie strukturalne",
-    hall: "E301",
+    label: "Podstawy Algorytmiki",
+    hall: "E401",
     type: "Wykład",
-    professor: "Dr hab. inż. J. Montusiewicz"
+    professor: "Dr M. Ziemba"
   },
   {
     start: "10:15",
     end: "12:00",
-    label: "Systemy operacyjne",
-    hall: "E301",
-    type: "Wykład",
-    professor: "Dr hab. inż. A. Kotyra"
+    label: "Technika Cyfrowa",
+    hall: "CT 107",
+    type: "Ćwiczenia",
+    professor: "Dr inż. C. Kaczmarek"
   },
   {
     start: "12:15",
-    end: "13:45",
-    label: "Podstawy sieci komputerowych",
-    hall: "E301",
-    type: "Wykład",
-    professor: "Dr inż. D. Sawicki"
-  },
-  {
-    start: "14:00",
-    end: "15:30",
-    label: "Wychowanie fizyczne II",
-    hall: "SW",
+    end: "14:00",
+    label: "Metody Matematyczne W Zastosowaniach Inżynierskich",
+    hall: "E402",
     type: "Ćwiczenia",
-    professor: "No clue"
-  },
-  {
-    start: "16:15",
-    end: "19:15",
-    label: "Teoria obwodów elektrycznych",
-    hall: "E201",
-    type: "Wykład",
-    professor: "Prof. dr hab. inż. S. Kozak"
+    professor: "Dr M. Ziemba"
   }
 ];
 const thursday = [
   {
     start: "08:15",
     end: "10:00",
-    label: "Systemy operacyjne",
-    hall: "PE 10",
-    type: "Labo",
-    professor: "Dr inż. P. Prokop"
+    label: "Metody Matematyczne W Zastosowaniach Inżynierskich",
+    hall: "E211",
+    type: "Wykład",
+    professor: "Dr M. Ziemba"
   },
   {
-    start: "13:00",
-    end: "15:15",
-    label: "Fizyka II",
-    hall: "Ox102",
-    type: "Labo",
-    professor: "Dr inż. A. Dudziak"
-  },
+    start: "10:15",
+    end: "12:00",
+    label: "Metody Matematyczne W Zastosowaniach Inżynierskich",
+    hall: "E401",
+    type: "Wykład",
+    professor: "Dr M. Ziemba"
+  }
 ];
 const friday = [
   {
     start: "08:15",
     end: "10:00",
-    label: "Matematyka II",
-    hall: "PE 15a",
-    type: "Ćwiczenia",
-    professor: "Dr hab. Z. Łagodowski"
+    label: "Podstawy Automatyki",
+    hall: "CI 502",
+    type: "Labo",
+    professor: "Dr Inż. D. Kuś"
   },
   {
     start: "10:15",
     end: "12:00",
-    label: "⭐Teoria obwodów elektrycznych",
-    bonusContent: "Tygodnie nieparzyste",
-    hall: "E405",
-    type: "Projekt",
-    professor: "Dr inż. S. Styła"
+    label: "Podstawy algorytmiki",
+    hall: "CI 417A",
+    type: "Labo",
+    professor: "Dr M. Ziemba"
+  },
+  {
+    start: "12:15",
+    end: "14:00",
+    label: "Technika Cyfrowa",
+    hall: "E211",
+    type: "Wykład",
+    professor: "Dr Hab. Inż. P. Komada, Prof. Uczelni"
+  },
+  {
+    start: "14:15",
+    end: "16:00",
+    label: "Język Obcy I",
+    hall: "M IX CT 304 B207",
+    type: "Lekt",
+    professor: "Dr M. Ziemba"
   }
 ];
 const saturday = [
