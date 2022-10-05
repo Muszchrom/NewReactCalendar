@@ -89,10 +89,10 @@ const thursday = [
   {
     start: "10:15",
     end: "12:00",
-    label: "Metody Matematyczne W Zastosowaniach Inżynierskich",
+    label: "Podstawy automatyki",
     hall: "E401",
     type: "Wykład",
-    professor: "Dr M. Ziemba"
+    professor: "Dr inż. D. Kuś"
   }
 ];
 const friday = [
