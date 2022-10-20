@@ -10,7 +10,7 @@ const monday = [
   {
     start: "09:45",
     end: "12:00",
-    label: "⭐Technika Cyfrowa",
+    label: "⭐Elektronika i Energoelektronika",
     bonusContent: "Tydzień 1-10",
     hall: "E307",
     type: "Labo",
@@ -53,7 +53,7 @@ const tuesday = [
 ];
 const wednesday = [
   {
-    start: "08:15",
+    start: "08:30",
     end: "10:00",
     label: "Podstawy Algorytmiki",
     hall: "E401",
@@ -79,7 +79,7 @@ const wednesday = [
 ];
 const thursday = [
   {
-    start: "08:15",
+    start: "08:30",
     end: "10:00",
     label: "Metody Matematyczne W Zastosowaniach Inżynierskich",
     hall: "E211",
