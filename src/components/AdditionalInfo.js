@@ -1,9 +1,16 @@
-import { useState } from 'react';
-import Overlay from './Overlay';
+import { useState } from 'react'
+import Overlay from './Overlay'
+
+import ExercisesSVG from '../graphics/svgs/Exercises.svg'
+import LaboSVG from '../graphics/svgs/Labo.svg'
+import LectureSVG from '../graphics/svgs/Lecture.svg'
+import LektoratSVG from '../graphics/svgs/Lektorat.svg'
+import DefaultSVG from '../graphics/svgs/school_black_24dp.svg'
+
 import mapa from '../graphics/jpg/mapaKampusu.jpg'
 
 export default function AdditionalInfo(props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <>
@@ -20,10 +27,11 @@ export default function AdditionalInfo(props) {
           </ul>
           <img src={mapa} style={{width: "100%", boxShadow: "5px 5px 18px grey"}} alt="Mapa kampusu"/>
           <ul style={{marginTop: "2em"}}>
-            <li>✍️ - Wykład</li>
-            <li>🧪 - Laboratoria</li>
-            <li>📝 - Ćwiczenia</li>
-            <li>🎧 - Lektorat</li>
+            <li><img src={ExercisesSVG} alt=""/> - Wykład</li>
+            <li><img src={LaboSVG} alt=""/> - Laboratoria</li>
+            <li><img src={LectureSVG} alt=""/> - Ćwiczenia</li>
+            <li><img src={LektoratSVG} alt=""/> - Lektorat</li>
+            <li><img src={DefaultSVG} alt=""/> - Podstawowa ikona</li>
           </ul>
         </Overlay>
       }
@@ -31,5 +39,5 @@ export default function AdditionalInfo(props) {
         <div className="dots"></div>
       </button>
     </>
-  );
+  )
 }

@@ -5,6 +5,7 @@ const monday = [
     label: "Elektronika i Energoelektronika",
     hall: "PE 15A",
     type: "Wykład",
+    iconNumber: 2,
     professor: "Dr inż. T. Ławicki"
   },
   {
@@ -14,6 +15,7 @@ const monday = [
     bonusContent: "Tydzień 1-10",
     hall: "E307",
     type: "Labo",
+    iconNumber: 1,
     professor: "Dr inż. T. Ławicki"
   }
 ];
@@ -24,6 +26,7 @@ const tuesday = [
     label: "Podstawy Metrologii",
     hall: "E320",
     type: "Labo",
+    iconNumber: 1,
     professor: "Mgr. Inż. W. Kozioł"
   },
   {
@@ -32,6 +35,7 @@ const tuesday = [
     label: "Wprowadzenie do systemów baz danych",
     hall: "E207",
     type: "Labo",
+    iconNumber: 1,
     professor: "Dr inż. R. Dzierżak"
   },
   {
@@ -40,6 +44,7 @@ const tuesday = [
     label: "Wprowadzenie do systemów baz danych",
     hall: "E401",
     type: "Wykład",
+    iconNumber: 2,
     professor: "Dr Hab. Inż. P. Miller, Prof. Uczelni"
   },
   {
@@ -48,6 +53,7 @@ const tuesday = [
     label: "Podstawy Metrologii",
     hall: "E311",
     type: "Wykład",
+    iconNumber: 2,
     professor: "Dr Inż. J. Majewski"
   }
 ];
@@ -58,6 +64,7 @@ const wednesday = [
     label: "Podstawy Algorytmiki",
     hall: "E401",
     type: "Wykład",
+    iconNumber: 2,
     professor: "Dr M. Ziemba"
   },
   {
@@ -66,6 +73,7 @@ const wednesday = [
     label: "Technika Cyfrowa",
     hall: "CT 107",
     type: "Ćwiczenia",
+    iconNumber: 0,
     professor: "Dr inż. C. Kaczmarek"
   },
   {
@@ -74,6 +82,7 @@ const wednesday = [
     label: "Metody Matematyczne W Zastosowaniach Inżynierskich",
     hall: "E402",
     type: "Ćwiczenia",
+    iconNumber: 0,
     professor: "Dr M. Ziemba"
   }
 ];
@@ -84,6 +93,7 @@ const thursday = [
     label: "Metody Matematyczne W Zastosowaniach Inżynierskich",
     hall: "E211",
     type: "Wykład",
+    iconNumber: 2,
     professor: "Dr M. Ziemba"
   },
   {
@@ -92,6 +102,7 @@ const thursday = [
     label: "Podstawy automatyki",
     hall: "E401",
     type: "Wykład",
+    iconNumber: 2,
     professor: "Dr inż. D. Kuś"
   }
 ];
@@ -102,6 +113,7 @@ const friday = [
     label: "Podstawy Automatyki",
     hall: "CI 502",
     type: "Labo",
+    iconNumber: 1,
     professor: "Dr Inż. D. Kuś"
   },
   {
@@ -110,6 +122,7 @@ const friday = [
     label: "Podstawy algorytmiki",
     hall: "CI 417A",
     type: "Labo",
+    iconNumber: 1,
     professor: "Dr M. Ziemba"
   },
   {
@@ -118,6 +131,7 @@ const friday = [
     label: "Technika Cyfrowa",
     hall: "E211",
     type: "Wykład",
+    iconNumber: 2,
     professor: "Dr Hab. Inż. P. Komada, Prof. Uczelni"
   },
   {
@@ -126,6 +140,7 @@ const friday = [
     label: "Język Obcy I",
     hall: "M IX CT 304 B207",
     type: "Lekt",
+    iconNumber: 3,
     professor: "Dr M. Ziemba"
   }
 ];
