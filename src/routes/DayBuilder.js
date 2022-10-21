@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 import Tile from '../components/Tile';
 import AdditionalInfo from '../components/AdditionalInfo';
@@ -9,8 +9,6 @@ import LaboSVG from '../graphics/svgs/Labo.svg'
 import LectureSVG from '../graphics/svgs/Lecture.svg'
 import LektoratSVG from '../graphics/svgs/Lektorat.svg'
 import DefaultSVG from '../graphics/svgs/school_black_24dp.svg'
-
-import schoolSVG from '../graphics/svgs/school_black_24dp.svg';
 
 export default function DayBuilder(props) {
   const [min, max] = [0, 6];
