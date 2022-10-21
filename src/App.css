@@ -168,7 +168,6 @@ li img {
   overflow-wrap: break-word;
 }
 .tile-icon {
-  /* background-image: url('./graphics/svgs/school_black_24dp.svg'); */
   background-size: cover;
   position: absolute;
   top: 50%;
