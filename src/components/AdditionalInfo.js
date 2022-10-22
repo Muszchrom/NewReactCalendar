@@ -5,7 +5,7 @@ import ExercisesSVG from '../graphics/svgs/Exercises.svg'
 import LaboSVG from '../graphics/svgs/Labo.svg'
 import LectureSVG from '../graphics/svgs/Lecture.svg'
 import LektoratSVG from '../graphics/svgs/Lektorat.svg'
-import DefaultSVG from '../graphics/svgs/school_black_24dp.svg'
+import DefaultSVG from '../graphics/svgs/Default.svg'
 
 import mapa from '../graphics/jpg/mapaKampusu.jpg'
 
