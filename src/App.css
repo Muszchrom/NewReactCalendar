@@ -53,7 +53,6 @@ li img {
 /* ------------------------------------- */
 
 .app-header {
-  height: 80px;
   background: lightcoral;
   width: 100%;
   margin-bottom: 1em;
@@ -62,6 +61,8 @@ li img {
   padding: 0 1em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   max-width: 600px;
   margin: 0 auto;
   height: 100%;
@@ -74,6 +75,11 @@ li img {
   align-items: center;
   justify-content: flex-end;
   height: 100%;
+}
+.week-info {
+  padding: 0 0 .5em 1em;
+  font-family: 'Varela Round', sans-serif;
+  width: 100%;
 }
 .button-container {
   height: 100%;
@@ -89,13 +95,13 @@ li img {
 }
 .nav-dropdown {
   position: absolute;
-  top: 80px;
+  top: calc(80px - 1em);
   left: 0;
   z-index: 2;
   background: lightcoral;
   border-radius: 0 0 10px 10px;
   width: 200px;
-  padding: 0 1em 1em 1em;
+  padding: 1em;
 }
 .nav-dropdown ul {
   padding: 0;

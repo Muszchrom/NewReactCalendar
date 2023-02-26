@@ -25,6 +25,19 @@ export default function DayBuilder(props) {
   return (
     <div style={{width: "100%", maxWidth: "calc(500px + 2em)", flex: 1, padding: "0 1em"}}>
       {props.day.map((obj, index) => {
+        if (
+          obj.bonusContent?.start &&
+          !(obj.bonusContent.start <= props.currentWeek.number &&
+            props.currentWeek.number <= obj.bonusContent.end)
+          ) {
+          return null;
+        }
+        if (
+          obj.bonusContent?.oddWeeks !== undefined &&
+          obj.bonusContent.oddWeeks !== props.currentWeek.isOdd
+        ) {
+          return null;
+        }
         return (
           <Tile
             start={obj.start}
@@ -47,7 +60,7 @@ function SchoolContent({getIco, obj}) {
     <div style={{marginLeft: "1em"}}>
       <p className="hours">{obj.start} - {obj.end}</p>
       <h2 className="label">{obj.label}</h2>
-      {obj.bonusContent && <p className="hours">{obj.bonusContent}</p>}
+      {obj.bonusContent && <p className="hours">{obj.bonusContent.description}</p>}
       <p className="hours">{obj.professor}</p>
       <p className="hours">{obj.type}, {obj.hall}</p>
       <img className="overlay-svg" src={getIco(obj.iconNumber)} alt="School graduation hat"/>

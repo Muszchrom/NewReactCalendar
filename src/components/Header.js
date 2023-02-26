@@ -36,6 +36,7 @@ export default function Header(props) {
         <ul className="buttons-wrapper">
           <NavButton getCurrentDay={props.getCurrentDay}/>
         </ul>
+      <div className="week-info">Week &#x2116; {props.currentWeek.number}, Is {props.currentWeek.isOdd ? "Odd" : "Even"}</div>
       </div>
     </header>
   );

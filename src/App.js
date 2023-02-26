@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -7,13 +7,25 @@ import {
   Navigate
 } from 'react-router-dom';
 
-import { monday, tuesday, wednesday, thursday, friday, saturday, sunday } from './components/data.js';
+import { monday, tuesday, wednesday, thursday, friday, saturday, sunday, semesterBlueprint } from './components/data.js';
 import Header from './components/Header';
 import DayBuilder from './routes/DayBuilder';
 import NotFound from './routes/NotFound';
 
 function App() {
   const [dayName, setDayName] = useState("");
+  const [currentWeek, setCurrentWeek] = useState(semesterBlueprint.weeks[0]);
+
+  useEffect(() => {
+    let i = 0
+    console.log(semesterBlueprint.weeks[i].start)
+    for (; i<semesterBlueprint.weeks.length; i++) {
+      if (new Date() < new Date(semesterBlueprint.weeks[i].start + "T00:00")) {
+        break;
+      }
+    }
+    i !== 0 && setCurrentWeek(semesterBlueprint.weeks[i]);
+  }, []);
 
   const getCurrentDay = () => {
     const daysOfTheWeek = [
@@ -32,16 +44,16 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header getCurrentDay={getCurrentDay} dayName={dayName}/>
+        <Header getCurrentDay={getCurrentDay} dayName={dayName} currentWeek={currentWeek}/>
         <Routes>
           <Route exact path="/" element={<Navigate to={getCurrentDay()} />} />
-          <Route path="/monday" element={<DayBuilder setDayName={setDayName} title={"Monday"} day={monday}/>} />
-          <Route path="/tuesday" element={<DayBuilder setDayName={setDayName} title={"Tuesday"} day={tuesday}/>} />
-          <Route path="/wednesday" element={<DayBuilder setDayName={setDayName} title={"Wednesday"} day={wednesday}/>} />
-          <Route path="/thursday" element={<DayBuilder  setDayName={setDayName} title={"Thursday"} day={thursday}/>} />
-          <Route path="/friday" element={<DayBuilder  setDayName={setDayName} title={"Friday"} day={friday}/>} />
-          <Route path="/saturday" element={<DayBuilder  setDayName={setDayName} title={"Satuday"} day={saturday}/>} />
-          <Route path="/sunday" element={<DayBuilder  setDayName={setDayName} title={"Sunday"} day={sunday}/>} />
+          <Route path="/monday" element={<DayBuilder setDayName={setDayName} title={"Monday"} day={monday} currentWeek={currentWeek}/>} />
+          <Route path="/tuesday" element={<DayBuilder setDayName={setDayName} title={"Tuesday"} day={tuesday} currentWeek={currentWeek}/>} />
+          <Route path="/wednesday" element={<DayBuilder setDayName={setDayName} title={"Wednesday"} day={wednesday} currentWeek={currentWeek}/>} />
+          <Route path="/thursday" element={<DayBuilder  setDayName={setDayName} title={"Thursday"} day={thursday} currentWeek={currentWeek}/>} />
+          <Route path="/friday" element={<DayBuilder  setDayName={setDayName} title={"Friday"} day={friday} currentWeek={currentWeek}/>} />
+          <Route path="/saturday" element={<DayBuilder  setDayName={setDayName} title={"Satuday"} day={saturday} currentWeek={currentWeek}/>} />
+          <Route path="/sunday" element={<DayBuilder  setDayName={setDayName} title={"Sunday"} day={sunday} currentWeek={currentWeek}/>} />
           <Route path="*" element={<NotFound setDayName={setDayName} title={"ERR 404"} />} />
         </Routes>
       </BrowserRouter>
