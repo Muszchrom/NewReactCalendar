@@ -79,7 +79,7 @@ const wednesday = [
   {
     start: "12:15",
     end: "14:30",
-    label: "Systemy Sztucznej Inteligencji",
+    label: "⭐Systemy Sztucznej Inteligencji",
     bonusContent: {
       description: "Tydzień 6-15",
       start: 6,
@@ -93,7 +93,7 @@ const wednesday = [
   {
     start: "14:45",
     end: "17:00",
-    label: "Modelowanie I Symulacje Komputerowe",
+    label: "⭐Modelowanie I Symulacje Komputerowe",
     bonusContent: {
       description: "Tydzień 4-13",
       start: 4,
@@ -169,7 +169,7 @@ const friday = [
       description: "Tygodnie parzyste",
       oddWeeks: false
     },
-    hall: "CI E311",
+    hall: "E311",
     type: "Wykład",
     iconNumber: 2,
     professor: "Dr Ł. Stępień"
@@ -204,7 +204,7 @@ const saturday = [
     label: "⭐",
     hall: "Home",
     type: "Nauka",
-    professor: "Karol 😎"
+    professor: ""
   }
 ];
 const sunday = [
@@ -214,7 +214,7 @@ const sunday = [
     label: "⭐",
     hall: "Home",
     type: "Nauka",
-    professor: "Karol 😎"
+    professor: ""
   }
 ];
 const colors = [

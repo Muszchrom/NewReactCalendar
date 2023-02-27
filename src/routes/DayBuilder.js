@@ -25,25 +25,29 @@ export default function DayBuilder(props) {
   return (
     <div style={{width: "100%", maxWidth: "calc(500px + 2em)", flex: 1, padding: "0 1em"}}>
       {props.day.map((obj, index) => {
+        let c = colors[Math.floor(Math.random() * (max - min + 1)) + min];
+        let e = obj.end
         if (
           obj.bonusContent?.start &&
           !(obj.bonusContent.start <= props.currentWeek.number &&
             props.currentWeek.number <= obj.bonusContent.end)
           ) {
-          return null;
+          c = "gray";
+          e += " ⛔";
         }
         if (
           obj.bonusContent?.oddWeeks !== undefined &&
           obj.bonusContent.oddWeeks !== props.currentWeek.isOdd
         ) {
-          return null;
+          c = "gray";
+          e += " ⛔";
         }
         return (
           <Tile
             start={obj.start}
-            end={obj.end}
+            end={e}
             label={obj.label}
-            color={colors[Math.floor(Math.random() * (max - min + 1)) + min]}
+            color={c}
             key={index}
             icon={getIco(obj.iconNumber)}>
             {obj.professor && <SchoolContent getIco={getIco} obj={props.day[index]}/>}

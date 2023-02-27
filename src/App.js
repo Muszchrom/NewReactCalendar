@@ -20,7 +20,7 @@ function App() {
     let i = 0
     console.log(semesterBlueprint.weeks[i].start)
     for (; i<semesterBlueprint.weeks.length; i++) {
-      if (new Date() < new Date(semesterBlueprint.weeks[i].start + "T00:00")) {
+      if (new Date(new Date().setDate(new Date().getDate() - 7)) < new Date(semesterBlueprint.weeks[i].start + "T00:00")) {
         break;
       }
     }
