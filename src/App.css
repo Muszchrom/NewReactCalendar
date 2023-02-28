@@ -237,12 +237,10 @@ li img {
 }
 .overlay-svg {
   position: absolute;
-  /* bottom: 3em; */
   right: 1em;
   width: 200px;
   transform: rotateZ(-10deg);
 }
-
 .dots, .dots::after, .dots::before {
   background: black;
   width: 7px;
@@ -258,4 +256,27 @@ li img {
   content: '';
   position: absolute;
   right: 10px;
+}
+.image-frame {
+  width: 100%;
+  height: calc(70vw - 1.4em);
+  max-height: 385px;
+  box-shadow: 0 0 28px beige;
+  box-shadow: inset 0 0 28px antiquewhite;
+}
+.animated-background {
+  background: linear-gradient(-45deg, antiquewhite 30%, beige, antiquewhite 70%);
+	background-size: 200% 200%;
+	animation: placeHolderShimmer 1.6s ease infinite;
+}
+@keyframes placeHolderShimmer {
+  0% {
+		background-position: -50% 50%;
+	}
+	50% {
+		background-position: 150% 50%;
+	}
+  100% {
+		background-position: -50% 50%;
+	}
 }

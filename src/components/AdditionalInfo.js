@@ -11,7 +11,6 @@ import mapa from '../graphics/jpg/mapaKampusu.jpg'
 
 export default function AdditionalInfo(props) {
   const [open, setOpen] = useState(false)
-
   return (
     <>
       {open &&
@@ -24,7 +23,9 @@ export default function AdditionalInfo(props) {
             <li>PE 15a - Katedra Informatyki (Pentagon)</li>
             <li>M IX - Wydział Mechaniczny</li>
           </ul>
-          <img src={mapa} style={{width: "100%", boxShadow: "5px 5px 18px grey"}} alt="Mapa kampusu"/>
+          <div className="image-frame animated-background">
+            <img src={mapa} style={{width: "100%", height: "100%", border: "1px solid wheat", objectFit: "cover"}} alt="Mapa kampusu"/>
+          </div>
           <ul style={{marginTop: "2em"}}>
             <li><img src={ExercisesSVG} alt=""/> - Wykład</li>
             <li><img src={LaboSVG} alt=""/> - Laboratoria</li>

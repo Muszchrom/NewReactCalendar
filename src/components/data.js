@@ -164,7 +164,7 @@ const friday = [
   {
     start: "08:15",
     end: "10:00",
-    label: "⭐Modelowanie I Symulacje Komputerowe",
+    label: "⭐Analiza Numeryczna",
     bonusContent: {
       description: "Tygodnie parzyste",
       oddWeeks: false
