@@ -11,6 +11,7 @@ import mapa from '../graphics/jpg/mapaKampusu.jpg'
 
 export default function AdditionalInfo(props) {
   const [open, setOpen] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
   return (
     <>
       {open &&
@@ -24,7 +25,7 @@ export default function AdditionalInfo(props) {
             <li>M IX - Wydział Mechaniczny</li>
           </ul>
           <div className="image-frame animated-background">
-            <img src={mapa} style={{width: "100%", height: "100%", border: "1px solid wheat", objectFit: "cover"}} alt="Mapa kampusu"/>
+            <img src={mapa} className="map-image" style={imageLoaded ? {} : {display: "none"}} alt="Mapa kampusu" onLoad={() => setImageLoaded(true)}/>
           </div>
           <ul style={{marginTop: "2em"}}>
             <li><img src={ExercisesSVG} alt=""/> - Wykład</li>
