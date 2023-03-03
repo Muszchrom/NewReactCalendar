@@ -4,7 +4,7 @@ const monday = [
     end: "10:15",
     label: "⭐Programowanie Obiektowe",
     bonusContent: {
-      description: "Tydzień 1-10",
+      description: "Tydzień 6-15",
       start: 6,
       end: 15,
     },
@@ -18,7 +18,7 @@ const monday = [
     end: "12:45",
     label: "⭐Elektromaszynowe układy wykonawcze",
     bonusContent: {
-      description: "Tydzień 1-10",
+      description: "Tydzień 6-15",
       start: 6,
       end: 15,
     },
