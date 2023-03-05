@@ -77,9 +77,30 @@ li img {
   height: 100%;
 }
 .week-info {
-  padding: 0 0 .5em 1em;
-  font-family: 'Varela Round', sans-serif;
+  padding-bottom: .5em;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.week-info-txt {
+  width: 50%;
+  max-width: 200px;
+  text-align: center;
+}
+.week-nav-button {
+  border-radius: 6px;
+  padding: .2em 1em;
+  border: none;
+  color: lightcoral;
+  font-weight: bold;
+  font-size: 1em;
+  background: rgba(250, 235, 215, .6);
+  transition: all .2s ease-in-out;
+}
+.week-nav-button:hover {
+  cursor: pointer;
+  background: rgba(250, 235, 215, .8);
 }
 .button-container {
   height: 100%;
@@ -273,9 +294,9 @@ li img {
 .animated-background {
   background: linear-gradient(-45deg, antiquewhite 30%, beige, antiquewhite 70%);
 	background-size: 200% 200%;
-	animation: placeHolderShimmer 1.6s ease infinite;
+	animation: imageLoadingAnimation 1.6s ease infinite;
 }
-@keyframes placeHolderShimmer {
+@keyframes imageLoadingAnimation {
   0% {
 		background-position: -50% 50%;
 	}

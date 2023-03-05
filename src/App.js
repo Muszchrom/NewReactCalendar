@@ -41,10 +41,15 @@ function App() {
     return daysOfTheWeek[day];
   }
 
+  const handleWeekChange = (s) => {
+    if (s < 1 || s >= semesterBlueprint.weeks.length) return;
+    setCurrentWeek(semesterBlueprint.weeks[s-1])
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Header getCurrentDay={getCurrentDay} dayName={dayName} currentWeek={currentWeek}/>
+        <Header getCurrentDay={getCurrentDay} dayName={dayName} currentWeek={currentWeek} handleWeekChange={handleWeekChange}/>
         <Routes>
           <Route exact path="/" element={<Navigate to={getCurrentDay()} />} />
           <Route path="/monday" element={<DayBuilder setDayName={setDayName} title={"Monday"} day={monday} currentWeek={currentWeek}/>} />

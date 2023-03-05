@@ -7,7 +7,7 @@ export default function Header(props) {
 
   useEffect(() => {
     open && document.addEventListener("keydown", (e) => {
-      e.keyCode === 27 && setOpen(false);
+      e.key === 27 && setOpen(false);
     })
   }, [open])
 
@@ -36,7 +36,11 @@ export default function Header(props) {
         <ul className="buttons-wrapper">
           <NavButton getCurrentDay={props.getCurrentDay}/>
         </ul>
-      <div className="week-info">Week &#x2116; {props.currentWeek.number}, Is {props.currentWeek.isOdd ? "Odd" : "Even"}</div>
+      <div className="week-info">
+        <button type="button" className="week-nav-button" onClick={() => props.handleWeekChange(props.currentWeek.number-1)}>{"<<"}</button>
+        <span className="week-info-txt">Week &#x2116; {props.currentWeek.number}, Is {props.currentWeek.isOdd ? "Odd" : "Even"}</span>
+        <button type="button" className="week-nav-button" onClick={() => props.handleWeekChange(props.currentWeek.number+1)}>{">>"}</button>
+      </div>
       </div>
     </header>
   );
