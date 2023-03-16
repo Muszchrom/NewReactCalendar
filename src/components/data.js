@@ -18,9 +18,9 @@ const monday = [
     end: "12:45",
     label: "⭐Elektromaszynowe układy wykonawcze",
     bonusContent: {
-      description: "Tydzień 6-15",
-      start: 6,
-      end: 15,
+      description: "Tydzień 4-13",
+      start: 4,
+      end: 13,
     },
     hall: "E112",
     type: "Labo",
@@ -125,7 +125,7 @@ const thursday = [
     professor: "E. Malik"
   },
   {
-    start: "12:15",
+    start: "12:30",
     end: "14:00",
     label: "Analiza Numeryczna",
     bonusContent: {
