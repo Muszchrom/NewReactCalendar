@@ -39,7 +39,7 @@ const monday = [
 ];
 const tuesday = [
   {
-    start: "08:15",
+    start: "08:30",
     end: "10:00",
     label: "Podstawy elektroenergetyki",
     hall: "E311",
@@ -116,6 +116,15 @@ const thursday = [
     professor: "Dr hab. inż. Z. Omiotek, prof uczelni"
   },
   {
+    start: "10:15",
+    end: "12:00",
+    label: "Język Obcy II",
+    hall: "CT 302",
+    type: "Lekt",
+    iconNumber: 3,
+    professor: "E. Malik"
+  },
+  {
     start: "12:15",
     end: "14:00",
     label: "Analiza Numeryczna",
@@ -186,15 +195,6 @@ const friday = [
     type: "Wykład",
     iconNumber: 2,
     professor: "Prof. Dr hab. inż. S. Kozak"
-  },
-  {
-    start: "12:15",
-    end: "14:00",
-    label: "Język Obcy II",
-    hall: "M IX, CT 107, CT 302",
-    type: "Lekt",
-    iconNumber: 3,
-    professor: "???"
   }
 ];
 const saturday = [
