@@ -39,7 +39,7 @@ const monday = [
 ];
 const tuesday = [
   {
-    start: "08:15",
+    start: "08:30",
     end: "10:00",
     label: "Podstawy elektroenergetyki",
     hall: "E311",

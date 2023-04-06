@@ -7,7 +7,7 @@ export default function Header(props) {
 
   useEffect(() => {
     open && document.addEventListener("keydown", (e) => {
-      e.key === 27 && setOpen(false);
+      e.key === "Escape" && setOpen(false);
     })
   }, [open])
 
@@ -34,7 +34,7 @@ export default function Header(props) {
             </div>
           )}
         <ul className="buttons-wrapper">
-          <NavButton getCurrentDay={props.getCurrentDay}/>
+          <NavButton getAndSetCurrentWeek={props.getAndSetCurrentWeek} getCurrentDay={props.getCurrentDay}/>
         </ul>
       <div className="week-info">
         <button type="button" className="week-nav-button" onClick={() => props.handleWeekChange(props.currentWeek.number-1)}>{"<<"}</button>
@@ -50,9 +50,14 @@ export default function Header(props) {
 function NavButton(props) {
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    props.getAndSetCurrentWeek();
+    navigate(props.getCurrentDay())
+  }
+
   return (
     <li className="button-container">
-      <button onClick={() => navigate(props.getCurrentDay())} className="nav-button" aria-label="Go to the current day">
+      <button onClick={() => handleClick()} className="nav-button" aria-label="Go to the current day">
       </button>
     </li>
   )

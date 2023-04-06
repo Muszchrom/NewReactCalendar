@@ -1,4 +1,0 @@
-1. Add rest of day routine
-2. Style elements on click/active/hover
-3. name buttons
-4. Make app faster

@@ -17,14 +17,7 @@ function App() {
   const [currentWeek, setCurrentWeek] = useState(semesterBlueprint.weeks[0]);
 
   useEffect(() => {
-    let i = 0
-    console.log(semesterBlueprint.weeks[i].start)
-    for (; i<semesterBlueprint.weeks.length; i++) {
-      if (new Date(new Date().setDate(new Date().getDate() - 7)) < new Date(semesterBlueprint.weeks[i].start + "T00:00")) {
-        break;
-      }
-    }
-    i !== 0 && setCurrentWeek(semesterBlueprint.weeks[i]);
+    getAndSetCurrentWeek();
   }, []);
 
   const getCurrentDay = () => {
@@ -41,17 +34,28 @@ function App() {
     return daysOfTheWeek[day];
   }
 
+  const getAndSetCurrentWeek = () => {
+    let i = 0;
+    while (i<semesterBlueprint.weeks.length) {
+      if (new Date(new Date().setDate(new Date().getDate() - 7)) < new Date(semesterBlueprint.weeks[i].start + "T00:00")) {
+        break;
+      }
+      i++;
+    }
+    i !== 0 && setCurrentWeek(semesterBlueprint.weeks[i]);
+  }
+
   const handleWeekChange = (s) => {
     if (s < 1 || s >= semesterBlueprint.weeks.length) return;
-    setCurrentWeek(semesterBlueprint.weeks[s-1])
+    setCurrentWeek(semesterBlueprint.weeks[s-1]);
   }
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Header getCurrentDay={getCurrentDay} dayName={dayName} currentWeek={currentWeek} handleWeekChange={handleWeekChange}/>
+        <Header getCurrentDay={getCurrentDay} dayName={dayName} currentWeek={currentWeek} handleWeekChange={handleWeekChange} getAndSetCurrentWeek={getAndSetCurrentWeek}/>
         <Routes>
-          <Route exact path="/" element={<Navigate to={getCurrentDay()} />} />
+          <Route exact path="/" element={<HandleDefaultPath getCurrentDay={getCurrentDay} />} />
           <Route path="/monday" element={<DayBuilder setDayName={setDayName} title={"Monday"} day={monday} currentWeek={currentWeek}/>} />
           <Route path="/tuesday" element={<DayBuilder setDayName={setDayName} title={"Tuesday"} day={tuesday} currentWeek={currentWeek}/>} />
           <Route path="/wednesday" element={<DayBuilder setDayName={setDayName} title={"Wednesday"} day={wednesday} currentWeek={currentWeek}/>} />
@@ -64,6 +68,10 @@ function App() {
       </BrowserRouter>
     </div>
   );
+}
+
+function HandleDefaultPath(props) {
+  return <Navigate to={props.getCurrentDay()} />
 }
 
 export default App;
