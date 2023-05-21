@@ -6,10 +6,12 @@ export default function NotFound(props) {
      props.setDayName(props.title);
   })
 
+  console.log(props)
+
   return (
     <div style={{textAlign: "center"}}>
       <h1>404 ERR</h1>
-      <Link to="/monday" style={{textDecoration: "underline"}}>
+      <Link to={props.goTo} style={{textDecoration: "underline"}}>
         Get me back to monday!
       </Link>
     </div>
