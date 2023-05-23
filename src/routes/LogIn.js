@@ -9,6 +9,12 @@ export default function LogIn() {
         <NavLink to={"/plan/monday"} className="tile-link">
             PLAN LEKCJI 
         </NavLink>
+        <br></br>
+        <br></br>
+        <br></br>
+        <NavLink to={"/"} className="tile-link">
+            LANDING PAGE 
+        </NavLink>
         </>
     );
 }
