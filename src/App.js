@@ -12,6 +12,7 @@ import Header from './components/Header';
 import DayBuilder from './routes/DayBuilder';
 import NotFound from './routes/NotFound';
 import LogIn from './routes/LogIn';
+import Landing from './routes/Landing'
 
 function App() {
   const [dayName, setDayName] = useState("");
@@ -57,6 +58,7 @@ function App() {
         <Routes>
           <Route path="/plan/*" element={<Plan getCurrentDay={getCurrentDay} dayName={dayName} currentWeek={currentWeek} handleWeekChange={handleWeekChange} getAndSetCurrentWeek={getAndSetCurrentWeek} setDayName={setDayName}/>} />
           <Route path="/login" element={<LogIn/>}/>
+          <Route exact path="/" element={<Landing/>}/>
           <Route path="*" element={<NotFound setDayName={setDayName} title={"ERR 404"} goTo={"/plan/"}/>} />
         </Routes>    
       </BrowserRouter>

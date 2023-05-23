@@ -21,9 +21,10 @@ export default function DayBuilder(props) {
     const ico = i === 0 ? ExercisesSVG : (i === 1 ? LaboSVG : (i === 2 ? LectureSVG : (i === 3 ? LektoratSVG : DefaultSVG)))
     return ico
   }
-
+// style={{width: "100%", maxWidth: "calc(500px + 2em)", flex: 1, padding: "0 1em"}}
+// className="content-wrapper"
   return (
-    <div style={{width: "100%", maxWidth: "calc(500px + 2em)", flex: 1, padding: "0 1em"}}>
+    <div className="content-wrapper">
       {props.day.map((obj, index) => {
         let c = colors[Math.floor(Math.random() * (max - min + 1)) + min];
         let e = obj.end

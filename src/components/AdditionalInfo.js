@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import Overlay from './Overlay'
 
 import ExercisesSVG from '../graphics/svgs/Exercises.svg'
@@ -33,6 +34,9 @@ export default function AdditionalInfo(props) {
             <li><img src={LectureSVG} alt=""/> - Ćwiczenia</li>
             <li><img src={LektoratSVG} alt=""/> - Lektorat</li>
             <li><img src={DefaultSVG} alt=""/> - Podstawowa ikona</li>
+            <NavLink to={"/"}>
+              Go back to the landing page
+            </NavLink>
           </ul>
         </Overlay>
       }
