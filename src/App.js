@@ -38,17 +38,16 @@ function App() {
 
   const getAndSetCurrentWeek = () => {
     let i = 0;
-    while (i<semesterBlueprint.weeks.length) {
-      if (new Date(new Date().setDate(new Date().getDate() - 7)) < new Date(semesterBlueprint.weeks[i].start + "T00:00")) {
-        break;
-      }
-      i++;
+    const studiesWeek = new Date(semesterBlueprint.weeks[i].start + "T00:00");
+    for (i; i<semesterBlueprint.weeks.length-1; i++) {
+      const aWeekBack = new Date(new Date().setDate(new Date().getDate() - 7));
+      if (aWeekBack < studiesWeek) break;
     }
     i !== 0 && setCurrentWeek(semesterBlueprint.weeks[i]);
   }
 
   const handleWeekChange = (s) => {
-    if (s < 1 || s >= semesterBlueprint.weeks.length) return;
+    if (s < 1 || s > semesterBlueprint.weeks.length) return;
     setCurrentWeek(semesterBlueprint.weeks[s-1]);
   }
 
